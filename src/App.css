@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+body {
+	font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.salario-wrapper {
+	display: flex;
+	gap: 1rem;
+	align-items: baseline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.salario-wrapper input {
+	height: fit-content;
+	border: none;
+    border-bottom: 2px solid gray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrapper-border {
+	padding: 1rem;
+	border: 1px solid gray;
+	border-radius: 0.75rem;
+	width: fit-content;
+	overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper-border hr {
+	width: 150%;
+	position: relative;
+	right: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custos-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+.custo-unico-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 0.75rem;
+}
+
+.custo-botao {
+	height: fit-content;
+	border: none;
+	background-color: transparent;
+}
+
+.custo-botao:hover {
+	text-decoration: underline;
+}
+
+.botao-editar{
+	color: blue;
+}
+
+.botao-remover {
+	color: red;
+}
+
+.botao-adicionar {
+	color: gray;
 }
