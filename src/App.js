@@ -1,16 +1,18 @@
 import './App.css';
 import {useState} from 'react'
-import CustoFixo from './components/CustoFixo';
+import Custo from './components/Custo';
+import Balanco from './components/Balanco';
 
 function App() {
 	const [salario, setSalario] = useState(0);
-	const [listaCustoFixo, setlistaCustoFixo] = useState([
+	const [listaCustoFixo, setListaCustoFixo] = useState([
 		{
 			nome: 'Aluguel',
-			valor: 1200
-		} 
+			valor: 1200,
+			ativo: true
+		}
 	]);
-	const [listaCustoMisto, setlistaCustoMisto] = useState([]);
+	const [listaCustoMisto, setListaCustoMisto] = useState([]);
 
   return (
     <div>
@@ -21,7 +23,11 @@ function App() {
 			<input type="number" value={salario} onChange={(e) => setSalario(e.target.value)}/>
 		</div>
 		<hr />
-		<CustoFixo listaCustoFixo={listaCustoFixo}setlistaCustoFixo={setlistaCustoFixo}/>
+		<div className="custos-container">
+			<Custo titulo={"Custo Fixo"} descricao={"(aluguel, contas, ...)"} listaCusto={listaCustoFixo} setListaCusto={setListaCustoFixo}/>
+			<Custo titulo={"Custo Misto"} descricao={"(reservas, investimentos, ...)"} listaCusto={listaCustoMisto} setListaCusto={setListaCustoMisto}/>
+			<Balanco listaCustoFixo={listaCustoFixo} listaCustoMisto={listaCustoMisto}/>
+		</div>
     </div>
   );
 }

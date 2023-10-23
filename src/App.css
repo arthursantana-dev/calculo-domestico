@@ -8,7 +8,7 @@ body {
 	align-items: baseline;
 }
 
-.salario-wrapper input {
+input {
 	height: fit-content;
 	border: none;
     border-bottom: 2px solid gray;
@@ -18,7 +18,7 @@ body {
 	padding: 1rem;
 	border: 1px solid gray;
 	border-radius: 0.75rem;
-	width: fit-content;
+	width: 100%;
 	overflow: hidden;
 }
 
@@ -32,6 +32,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+}
+
+.custos-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	gap: 1rem;
 }
 
 h1 {
@@ -67,4 +75,17 @@ h1 {
 
 .botao-adicionar {
 	color: gray;
+}
+
+div.criar-novo-custo-container{
+	display: flex;
+	justify-content: space-around;
+	gap: 1rem;
+	width: fit-content;
+}
+
+div.criar-novo-custo-container input{
+	width: 20%;
+	padding: 0;
+	margin: 0;
 }
