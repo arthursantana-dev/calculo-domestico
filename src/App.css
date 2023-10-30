@@ -89,3 +89,8 @@ div.criar-novo-custo-container input{
 	padding: 0;
 	margin: 0;
 }
+
+section.balanco__custo-container{
+	display: flex;
+	justify-content: space-between;
+}
